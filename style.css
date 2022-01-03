@@ -1,0 +1,26 @@
+:root{
+    --box-height: 100px;
+    --box-width: 100px;
+    --box-margin: 10px;
+}
+li{
+    list-style: none;
+}
+li::before{
+    content: 'content ';
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc((var(--box-width) + 2*var(--box-margin))*3);
+}
+.boxes div{
+    height: var(--box-height);
+    width: var(--box-width);
+    margin: var(--box-margin);
+    background-color: darkblue;
+}
+.boxes div:nth-child(2){
+    height: calc(2*var(--box-height));
+}
